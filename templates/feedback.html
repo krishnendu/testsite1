@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Please Give a Feedback</h1>
+        <form  method="post" class="col s12" >{% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Write your Feedback</label>
+                <textarea class="form-control" name='feedback' id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type='submit' class="btn btn-secondary">Submit Feedback</button>
+        </form>
+        
+        {% endblock %}

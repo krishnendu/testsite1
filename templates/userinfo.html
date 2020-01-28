@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Profile</h1>
+
+    <img src="{{pp.url}}" alt="" style="width:100px;height:100px;" >
+    <p>User id :{{user.id}} <br></p>
+    <p>Username :{{username}} <br></p>
+    <p>Name :{{user.first_name}} {{user.last_name}} <br></p>
+    <p>Email :{{user.email}} <br></p>
+    <p>Country :{{user.country}} <br></p>
+    <p>Phone number : {{user.phone_number}} <br></p>
+    <p>Address :{{user1.address}} <br></p>
+    <p>Date of Birth :{{user1.dob}} <br></p>
+    
+    <p>Gender :{{user1.sex}} <br></p>
+    <p>Pincode :{{user1.pincode}} <br></p>
+    <p>Bio : {{user1.bio}} <br></p>
+    <p><a class="btn btn-secondary" href="./edit">edit</a></p>
+    <a class="" href="/password_change">Change Password ? click here</a>
+</div>
+ {% endblock %}

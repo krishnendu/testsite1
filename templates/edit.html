@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+        <form  method="post" class="container" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="contain">
+                <h1>Edit your details</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="box">
+                            {% for field in form %}
+                                <div class="field">
+                                    <span class="text" for="{{ field.id_for_label }}"> {{ field.label }}</span>
+                                    {{ field }}
+                                    <p></p>
+                                    {% for error in field.errors %}
+                                        <p class="ferror">{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                            <button type='submit' class="btn btn-secondary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% endblock %}
